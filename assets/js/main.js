@@ -1,19 +1,17 @@
-//color menu bar on scroll
+// Select the DOM elements
 var navbar = document.querySelector('header');
 var dropDown = document.querySelector('#dropdown');
 var topBar = document.querySelector('.header_top');
 var imgLogo = document.querySelector('.navbar-brand');
 
 window.onscroll = function() {
-  if (window.pageYOffset > 200) {
-    navbar.classList.add('is-active');
-    dropDown.classList.add('bgcolor-dropdown');
-    imgLogo.classList.add('navbar-logo');
-  
+  if (window.scrollY > 200) {
+    if (navbar) navbar.classList.add('is-active');
+    if (dropDown) dropDown.classList.add('bgcolor-dropdown');
+    if (imgLogo) imgLogo.classList.add('navbar-logo');
   } else {
-    navbar.classList.remove('is-active');
-    dropDown.classList.remove('bgcolor-dropdown');
-    imgLogo.classList.remove('navbar-logo');
-  
+    if (navbar) navbar.classList.remove('is-active');
+    if (dropDown) dropDown.classList.remove('bgcolor-dropdown');
+    if (imgLogo) imgLogo.classList.remove('navbar-logo');
   }
 }
